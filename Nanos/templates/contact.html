@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+
+<!-- ==================== Centered Messages ==================== -->
+{% if messages %}
+  <div class="messages-overlay">
+    {% for message in messages %}
+      <div class="alert 
+                  alert-{{ message.tags }} 
+                  alert-dismissible fade show text-center" 
+           role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<!-- ==================== Contact Form ==================== -->
+<div class="container-fluid px-0 mb-3" style="background-color: #0f0721ff;">
+    <img src="https://picsum.photos/1000/400?random=2/2000/2000" class="d-block w-100 mx-0" alt="...">
+
+    <div class="container mb-3 py-4">
+        <h1 class="text-center" style="color: orange;">Contact Us</h1>
+        <form method="post" action="/contact">
+            {% csrf_token %}
+            <div class="form-group mb-3">
+                <label for="name" style="color: white;">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="email" style="color: white;">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="phone" style="color: white;">Phone Number</label>
+                <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Number">
+            </div>      
+
+            <div class="form-group mb-3" style="color: white;">
+                <label for="desc">Tell me about what you want to contact me for...</label>
+                <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+            </div>
+
+            <button class="btn" type="submit" style="background-color: orange; border: none; color: white;">
+                 Submit
+            </button>
+        </form>
+
+        <footer class="text-right mt-4">
+            <div style="color:#9e9e9e;">
+                <small>© 2025 Naino Khan — All rights reserved.</small>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<!-- ==================== CSS for Centered Messages ==================== -->
+<style>
+.messages-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050;  /* above other content */
+    width: 90%;
+    max-width: 400px;
+}
+
+.messages-overlay .alert {
+    font-size: 1.2rem;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+    background-color: #222; /* dark alert background */
+    color: orange; /* text color for dark theme */
+}
+
+/* Optional: auto-hide after 5 seconds */
+</style>
+
+<script>
+  // Auto-hide messages after 5 seconds
+  window.setTimeout(function() {
+    let alerts = document.querySelectorAll('.messages-overlay .alert');
+    alerts.forEach(function(alert) {
+      alert.classList.remove('show');
+      alert.classList.add('hide');
+    });
+  }, 5000);
+</script>
+
+{% endblock body %}

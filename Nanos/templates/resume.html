@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block body %}
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional CV</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0f0721ff;
+  color: white; /* makes all normal text white */
+}
+
+.container {
+  max-width: 800px;
+  margin: 80px auto;
+  background-color: transparent; /* transparent to show dark background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(220, 250, 101, 0.5);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  color: orange; /* header color */
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  color: orange; /* section headers orange */
+  border-bottom: 1px solid orange;
+  padding-bottom: 5px;
+}
+
+.section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.section li {
+  margin-bottom: 10px;
+  color: white; /* make sure list text is white */
+}
+
+  </style>
+</head>
+<body>
+  <div class="container" style = "background-color: #0f0721ff";>
+    <div class="header">
+      <h1 style= "color: orange; ">Hasnain Ahmad</h1>
+      <p>Software Engineer</p>
+      <img src="static\apj.jpg" alt="image not found" style=" border-radius: 50%;  width: 200px; box-shadow: 0px 0px 10px 0px rgba(220, 250, 101, 0.5);">
+    </div>
+    <div class="section">
+      <h2 style= "color: orange; ">Contact Information</h2>
+      <ul>
+        <li>Email: hasnain2244567@example.com</li>
+        <li>LinkedIn: Hasnain Ahmad </li>
+        <li>Phone: +92317993388</li>
+        <li>Address: kaka khail town dalazak road, Peshawar, Pakistan</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2 style= "color: orange; ">Education</h2>
+      <ul>
+        <li>Bachelor of Science in Software Engeneering - City University of Science and Information Technology (2025)</li>
+        <li>FSC - Edwardes College  (2021)</li>
+        <li>Matric - PMS Boys_4 (2019)</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2 style= "color: orange; ">Experience</h2>
+      <ul>
+        <li>Flutter App Development (1 year)</li>
+        <li>Python Development (1 year)</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2 style= "color: orange; ">Skills</h2>
+      <ul class="skills">
+  <li>
+    <span>Flutter</span>
+    <div class="bar"><div class="fill" style="width: 85%;"></div></div>
+  </li>
+  <li>
+    <span>Python</span>
+    <div class="bar"><div class="fill" style="width: 90%;"></div></div>
+  </li>
+  <li>
+    <span>Django</span>
+    <div class="bar"><div class="fill" style="width: 80%;"></div></div>
+  </li>
+  <li>
+    <span>Unity</span>
+    <div class="bar"><div class="fill" style="width: 70%;"></div></div>
+  </li>
+  <li>
+    <span>C++</span>
+    <div class="bar"><div class="fill" style="width: 75%;"></div></div>
+  </li>
+</ul>
+
+    </div>
+  </div>
+  <footer class="text-Left mt-4">
+         <div  style="color:#9e9e9e;">
+        <small>Code With Naino.</small>
+        </div>
+        </footer>
+</body>
+</html>
+
+{% endblock body %}

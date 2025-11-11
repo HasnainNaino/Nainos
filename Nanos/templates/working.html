@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% block title %}Services{% endblock title %}
+
+{% block body %}
+
+<div class="container-fluid" style="background-color: #0f0721ff;">
+  <div class="container my-0 pt-4">
+    <h1 class="my-4 text-center" style="color: orange;">On Going Projects</h1>
+
+    <div class="container my-4">
+      <div class="row">
+
+        <!-- 🟠 Portfolio -->
+        <div class="col-md-4 d-flex">
+          <div class="card custom-card mb-4 flex-fill" style="box-shadow: 0px 0px 10px 0px rgba(220, 250, 101, 0.5);">
+            <img src="/static/Portfolio.jpg" class="card-img-top fixed-img" alt="Portfolio">
+            <div class="card-body">
+              <p class="card-text text-orange">Naino's Portfolio</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="https://github.com/HasnainNaino/HasnainNaino.git" target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Open</button>
+                  </a>
+                  <a href="https://github.com/HasnainNaino/HasnainNaino.git" target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Download</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🟠 Hangman Game -->
+        <div class="col-md-4 d-flex">
+          <div class="card custom-card mb-4 flex-fill" style="box-shadow: 0px 0px 10px 0px rgba(220, 250, 101, 0.5);">
+            <img src="/static/ecommerce-website.png" class="card-img-top fixed-img" alt="Hangman Game">
+            <div class="card-body">
+              <p class="card-text text-orange">E-commars website</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="" target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Open</button>
+                  </a>
+                  <a href="" target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Download</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🟠 Chat Box -->
+        <div class="col-md-4 d-flex">
+          <div class="card custom-card mb-4 flex-fill" style="box-shadow: 0px 0px 10px 0px rgba(220, 250, 101, 0.5);">
+            <img src="/static/tweet.jpg" class="card-img-top fixed-img" alt="Chat Box">
+            <div class="card-body">
+              <p class="card-text text-orange">Tweeter</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="" target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Open</button>
+                  </a>
+                  <a href="" target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Download</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- row -->
+    </div> <!-- inner container -->
+  </div> <!-- outer container -->
+
+  <footer class="text-right mt-4">
+    <div style="color:#9e9e9e;">
+      <small>Code With Naino's.</small>
+    </div>
+  </footer>
+</div> <!-- container-fluid -->
+
+<style>
+  /* 🎨 Card Styling */
+  .custom-card {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    border-radius: 10px;
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 🖼️ Make all images equal height */
+  .fixed-img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /* 🧱 Make all columns same height */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .col-md-4 {
+    display: flex;
+  }
+
+  .text-orange {
+    color: orange;
+  }
+
+  .text-white {
+    color: white;
+  }
+
+  /* 🖱️ Orange button theme */
+  .btn-outline-secondary {
+    color: orange;
+    border-color: orange;
+  }
+  .btn-outline-secondary:hover {
+    background-color: orange;
+    color: white;
+  }
+
+  /* 🌒 Ensure full background coverage */
+  body {
+    background-color: #0f0721ff;
+    min-height: 100vh;
+  }
+
+  footer {
+    background-color: transparent;
+  }
+</style>
+
+{% endblock body %}

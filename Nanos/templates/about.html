@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block body %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  body {
+    background: #0f0721ff;
+    color: #e9e9ea;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+  padding: 50px 50px 100px 50px;
+}
+
+
+  h2, h5 {
+    color: orange;
+    margin-bottom: 15px;
+  }
+
+  .personal-info .label {
+    color: #bfbfbf;
+    width: 140px;
+    display: inline-block;
+    font-weight: 600;
+  }
+
+  a {
+    color: #ffd39b;
+  }
+
+  a:hover {
+    color: orange;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    main {
+      padding: 20px;
+    }
+  }
+</style>
+
+<main>
+  <div class="container-fluid" style="padding : 10px;">
+    <div class="row">
+      <!-- Left Side -->
+      <div class="col-lg-3" style="border-right: 1px solid #333;">
+        <h2>Personal Information</h2>
+        <p><span class="label">Birthday:</span> 15 oct 2003</p>
+        <p><span class="label">Website:</span> 
+          <a href="https://www.Naino's.com" target="_blank">www.Naino's.com</a>
+        </p>
+        <p><span class="label">Phone:</span> +92-317-993388</p>
+        <p><span class="label">City:</span> Peshawar, Pakistan</p>
+        <p><span class="label">Age:</span> 23</p>
+        <p><span class="label">Degree:</span> Bachelor's of Science in Software Engineering</p>
+        <p><span class="label">Email:</span> 
+          <a href="mailto:hasnain224567@gmail.com">hasnain224567@gmail.com</a>
+        </p>
+        <p><span class="label">Freelance:</span> Available</p>
+
+        
+
+      </div>
+      
+
+      <!-- Center Section -->
+      <div class="col-lg-9">
+        <h2>About Me</h2>
+        <p>
+          I am a passionate App and Web Developer skilled in building modern applications using
+          <strong>Flutter</strong> for cross-platform mobile apps and <strong>Django</strong> for powerful web backends.
+          I love turning ideas into real-world digital experiences that are efficient, elegant, and user-friendly.
+        </p>
+
+        <p>
+          I have experience working on full-stack projects, integrating AI-based features, and creating
+          seamless designs that balance functionality and creativity.
+        </p>
+
+        <p>
+          Outside of coding, I enjoy learning about AI, exploring UI/UX trends, and collaborating with developers.
+        </p>
+
+        <h2>Summary</h2>
+        <p style="font-size: 15px; color:#d4d4d4;">
+          Creative and motivated developer with a strong focus on usability, performance, and clean UI design.
+          Experienced in both frontend and backend development, delivering high-quality, user-centered applications.
+        </p>
+
+      </div>
+    </div>
+  </div>
+  <footer class="text-Left mt-4">
+         <div  style="color:#9e9e9e;">
+        <small>Code With Naino.</small>
+        </div>
+        </footer>
+</main>
+{% endblock body %}
